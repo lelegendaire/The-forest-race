@@ -43,7 +43,7 @@ basic_animate()
 
 let model;
 const loader = new GLTFLoader();
-loader.load( '/public/3D/boite.glb', function ( gltf ) {
+loader.load( 'public/3D/boite.glb', function ( gltf ) {
     model = gltf.scene
     
     

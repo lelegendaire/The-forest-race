@@ -51,7 +51,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
   let model;
   const loader = new GLTFLoader();
-  loader.load("/public/3D/boite.glb", function (gltf) {
+  loader.load("public/3D/boite.glb", function (gltf) {
     model = gltf.scene;
 
     const box = new THREE.Box3().setFromObject(model);

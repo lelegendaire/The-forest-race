@@ -776,7 +776,7 @@ __________________________________________________________________________
 }
 .stickyMask{
  
-   mask-image: url('/public/img/mask.svg');
+   mask-image: url('public/img/mask.svg');
   mask-position: 51.25% center;
   mask-repeat: no-repeat;
   mask-size: 100%;
