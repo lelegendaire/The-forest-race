@@ -1,39 +1,1726 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Forest Race</title>
+
     <link
       rel="preload"
       href="/Fifa_web/public/font/FWC26.otf"
       as="font"
       type="font/otf"
     />
-    <link rel="stylesheet" href="style.css" >
-    <link rel="icon" href="logo.svg">
-</head>
-<body>
-    <header class="herobanner">
-        <nav id="navigation">
-            
-            <li>Accueil</li>
-            <li>Jeux</li>
-            <li></li>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo.png" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="hide">
+      <nav>
+        <img src="/public/img/logo.svg" alt="The Forest Race" class="logo" />
+        <ul>
+          <li>
+            <a href="#">Accueil</a>
+          </li>
+          <li>
+            <a href="#concept">Concept</a>
+          </li>
+          <li>
+            <a href="#Gameplay_video">Vidéo gameplay</a>
+          </li>
+          <li>
+            <a href="#video_promo">Vidéo promotionnel</a>
+          </li>
+          <li>
+            <a href="#financement">Financement</a>
+          </li>
 
-        </nav>
-        <div>
-            <h1>The Forest Race</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente praesentium odio iure eligendi soluta commodi voluptates ipsa, non ipsum libero voluptatum ad placeat atque doloribus molestias deleniti sint reprehenderit maiores.</p>
-            <button>button1</button>
-        </div>
+          <li class="hamburger">
+            <a href="#">
+              <div class="bar"></div>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section id="video_promo"></section>
-        <section id="boite_3D"></section>
-        <section id="video_gameplay"></section>
-        <section id="donation_goal"></section>
+      <section class="herobanner">
+        <div class="vignette hide"></div>
+        <img
+          src="/public/img/background.png"
+          alt=""
+          class="parallax bg-img"
+          data-speedx="0.3"
+          data-speedy="0.38"
+          data-speedz="0"
+          data-rotation="0"
+          data-distance="-100"
+        />
+        <img
+          src="/public/img/fog_7.png"
+          alt=""
+          class="parallax fog-7"
+          data-speedx="0.27"
+          data-speedy="0.32"
+          data-speedz="0"
+          data-rotation="0"
+          data-distance="850"
+        />
+        <img
+          src="/public/img/mountain_10.png"
+          alt=""
+          class="parallax mountain-10"
+          data-speedx="0.195"
+          data-speedy="0.305"
+          data-speedz="0"
+          data-rotation="0"
+          data-distance="1100"
+        />
+        <img
+          src="/public/img/fog_6.png"
+          alt=""
+          class="parallax fog-6"
+          data-speedx="0.25"
+          data-speedy="0.28"
+          data-speedz="0"
+          data-rotation="0"
+          data-distance="1400"
+        />
+        <img
+          src="/public/img/mountain_9.png"
+          alt=""
+          class="parallax mountain-9"
+          data-speedx="0.125"
+          data-speedy="0.155"
+          data-speedz="0.15"
+          data-rotation="0.02"
+          data-distance="1700"
+        />
+        <img
+          src="/public/img/mountain_8.png"
+          alt=""
+          class="parallax mountain-8"
+          data-speedx="0.1"
+          data-speedy="0.11"
+          data-speedz="0"
+          data-rotation="0.02"
+          data-distance="1800"
+        />
+        <img
+          src="/public/img/fog_5.png"
+          alt=""
+          class="parallax fog-5"
+          data-speedx="0.16"
+          data-speedy="0.105"
+          data-speedz="0"
+          data-rotation="0"
+          data-distance="1900"
+        />
+        <img
+          src="/public/img/mountain_7.png"
+          alt=""
+          class="parallax mountain-7"
+          data-speedx="0.1"
+          data-speedy="0.1"
+          data-speedz="0"
+          data-rotation="0.09"
+          data-distance="2000"
+        />
+        <div
+          class="text parallax"
+          data-speedx="0.07"
+          data-speedy="0.07"
+          data-speedz="0"
+          data-rotation="0.11"
+          data-distance="0"
+        >
+          <h2>The</h2>
+          <h1>Forest race</h1>
+        </div>
+        <img
+          src="/public/img/mountain_6.png"
+          alt=""
+          class="parallax mountain-6"
+          data-speedx="0.065"
+          data-speedy="0.05"
+          data-speedz="0.05"
+          data-rotation="0.12"
+          data-distance="2300"
+        />
+        <img
+          src="/public/img/fog_4.png"
+          alt=""
+          class="parallax fog-4"
+          data-speedx="0.165"
+          data-speedy="0.03"
+          data-speedz="0"
+          data-rotation="0"
+          data-distance="2400"
+        />
+        <img
+          src="/public/img/mountain_5.png"
+          alt=""
+          class="parallax mountain-5"
+          data-speedx="0.08"
+          data-speedy="0.018"
+          data-speedz="0.13"
+          data-rotation="0.1"
+          data-distance="2550"
+        />
+        <img
+          src="/public/img/fog_3.png"
+          alt=""
+          class="parallax fog-3"
+          data-speedx="0.11"
+          data-speedy="0.018"
+          data-speedz="0"
+          data-rotation="0"
+          data-distance="2800"
+        />
+        <img
+          src="/public/img/mountain_4.png"
+          alt=""
+          class="parallax mountain-4"
+          data-speedx="0.059"
+          data-speedy="0.024"
+          data-speedz="0"
+          data-rotation="0"
+          data-distance="3200"
+        />
+        <img
+          src="/public/img/mountain_3.png"
+          alt=""
+          class="parallax mountain-3"
+          data-speedx="0.04"
+          data-speedy="0.018"
+          data-speedz="0.32"
+          data-rotation="0"
+          data-distance="3400"
+        />
+        <img
+          src="/public/img/fog_2.png"
+          alt=""
+          class="parallax fog-2"
+          data-speedx="0.15"
+          data-speedy="0.0115"
+          data-speedz="0"
+          data-rotation="0"
+          data-distance="3600"
+        />
+        <img
+          src="/public/img/mountain_2.png"
+          alt=""
+          class="parallax mountain-2"
+          data-speedx="0.0235"
+          data-speedy="0.013"
+          data-speedz="0.42"
+          data-rotation="0.15"
+          data-distance="3800"
+        />
+        <img
+          src="/public/img/mountain_1.png"
+          alt=""
+          class="parallax mountain-1"
+          data-speedx="0.027"
+          data-speedy="0.018"
+          data-speedz="0.53"
+          data-rotation="0.2"
+          data-distance="4000"
+        />
+        <img src="/public/img/sun_rays.png" alt="" class="sun-rays hide" />
+        <img
+          src="/public/img/black_shadow.png"
+          alt=""
+          class="black-shadow hide"
+        />
+        <img
+          src="/public/img/fog_1.png"
+          alt=""
+          class="parallax fog-1"
+          data-speedx="0.12"
+          data-speedy="0.01"
+          data-speedz="0"
+          data-rotation="0"
+          data-distance="4200"
+        />
+      </section>
+      <section class="introduction">
+        <div class="text-reveal">
+          <h2 class="reveal-text" id="Intro_titre">
+            Bienvenue dans l'univers de The Forest Race
+          </h2>
+          <p class="reveal-text" id="Content_intro">
+            Grand-mère prépare sa célèbre tarte de la forêt ! Pendant ce temps,
+            les animaux se trouvent de l'autre côté de la forêt et n'ont qu'une
+            idée en tête : arriver en premier chez grand-mère pour déguster la
+            première part de tarte Sur leur chemin, ils devront faire face au
+            Loup, au Renard, aux chasseurs et aux différents pièges de la forêt.
+            Le premier joueur à atteindre la maison de Grand- mère a remporté la
+            partie.
+          </p>
+        </div>
+      </section>
+      <section class="boite_3D" id="boite_3D">
+        <h2>Boîte du jeu</h2>
+        <div class="scanner">
+          <div class="scan-container">
+            <div class="scan-info left">
+              <span class="reveal-text">01 — THE GAME</span>
+              <h3 class="reveal-text">L'aventure prend vie.</h3>
+              <p class="reveal-text">
+                The Forest Race, un jeu de course de 2 à 6 joueurs pour environ 20 minutes de partie, à jouer en famille ou entre amis.
+              </p>
+            </div>
+
+            <div class="scan-info left">
+              <span class="reveal-text">02 — THE RACE</span>
+              <h3 class="reveal-text">À chacun son chemin.</h3>
+              <p class="reveal-text">
+                Choisissez votre animal, avancez sur le plateau de 100 cases et méfiez-vous des pièges. Chaque animal a son pouvoir spécial : saurez-vous l’utiliser au bon moment ?
+              </p>
+            </div>
+
+            <div class="scan-info left">
+              <span>03 — THE FINISH</span>
+              <h3>La première part revient au plus rapide.</h3>
+              <p>
+                Soyez le premier à atteindre la maison de Grand-mère et remportez la partie !
+              </p>
+            </div>
+          </div>
+          <div class="model"></div>
+        </div>
+      </section>
+      <section class="concept_jeu" id="concept">
+        <h2>Concept du jeu</h2>
+        <div class="svg_line">
+     <svg width="100%" height="100%" viewBox="0 0 657 963" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="squiggle">
+<path d="M240.924 7.50014C241.054 10.3752 244.48 23.1722 270.639 58.2148C281.311 72.5112 300.54 88.3391 321.813 104.067C331.104 110.936 339.864 116.968 347.997 122.24M347.997 122.24C378.078 141.74 399.582 150.857 407.69 153.596C438.683 164.067 479.878 156.491 497.414 150.497C523.88 141.452 542.071 129.47 546.538 125.418C548.555 123.589 549.521 121.668 549.186 119.883C548.429 115.836 538.717 112.099 526.789 107.845C517.309 104.464 484.049 103.525 433.519 103.718C384.018 103.907 363.472 113.21 347.997 122.24ZM347.997 122.24C345.37 123.773 342.889 125.298 340.437 126.769C331.505 132.128 312.359 158.52 283.233 196.945C270.584 213.632 259.998 222.832 244.231 236.181C228.464 249.53 207.258 266.294 190.16 278.168C164.661 295.876 140.603 306.244 118.001 315.068M118.001 315.068C115.343 316.106 112.704 317.122 110.085 318.127C63.2676 336.091 21.7562 327.654 13.2727 323.007C9.4343 320.904 8.54259 315.918 7.72835 311.933C7.31616 309.915 7.41364 307.82 8.39675 306.052C13.0706 297.646 27.8445 297.094 48.6642 295.092C67.088 293.32 81.9507 296.149 93.2855 301.08C97.5104 302.918 102.662 305.874 118.001 315.068ZM118.001 315.068C130.826 322.754 150.772 334.802 183.251 354.202C254.577 396.808 385.777 475.17 459.353 517.634C504.709 543.81 526.658 555.443 540.616 561.559M540.616 561.559C549.302 565.365 554.894 567.035 561.106 568.744C620.11 584.975 629.337 586.723 643.224 585.986C646.377 585.818 647.579 582.648 648.444 580.365L648.475 580.285C649.342 577.998 649.637 575.767 649.246 573.743C648.476 569.763 644.96 566.75 641.167 563.876C636.842 560.599 629.314 558.394 611.9 556.775C582.319 554.026 559.389 556.306 540.616 561.559ZM540.616 561.559C538.417 562.175 536.274 562.831 534.184 563.525C517.608 569.03 488.481 580.566 465.3 591.233C442.118 601.899 425.913 611.774 398.762 633.573C371.612 655.372 334.007 688.797 301.159 714.015C268.311 739.233 241.359 755.231 211.306 768.701C207.115 770.579 202.879 772.399 198.642 774.156M198.642 774.156C172.5 784.996 146.32 793.433 130.31 798.411C107.927 805.37 101.806 805.808 98.0108 804.827C87.3257 802.065 89.6528 772.495 94.7043 758.703C96.8523 752.839 116.495 753.57 141.29 754.008C150.793 754.176 158.594 755.876 198.642 774.156ZM198.642 774.156C206.721 777.843 216.112 782.205 227.094 787.365C292.515 818.106 414.099 877.675 484.805 910.939C555.51 944.202 571.654 949.356 593.737 955.19" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke="#005001"/>
+</svg>
+
+
+
+
+
+        </div>
+        <div class="concept-grid">
+        <div class="content_concept">
+          <h3 class="reveal-text">Une course, des fruits</h3>
+          <p class="reveal-text">
+          Chaque tour, vous jouez une carte Fruit et avancez du nombre de cases indiqué. De la pomme (1 case) à la myrtille (6 cases), la valeur du fruit décide de votre avancée.
+          </p>
+        </div>
+        <div class="content_concept left">
+          <h3 class="reveal-text">Chaque animal a son pouvoir</h3>
+          <p class="reveal-text">
+            Ours, sanglier, cerf, hibou, écureuil, lapin : chacun possède une capacité spéciale utilisable plusieurs fois par partie. Il faut choisir le bon moment pour la déclencher.
+          </p>
+        </div>
+        <div class="content_concept ">
+          <h3 class="reveal-text">La forêt vous réserve des surprises</h3>
+          <p class="reveal-text">
+           Cases Mystère, cases Piège, raccourcis et bonus : à chaque case, tout peut basculer. Un Chasseur vous renvoie au départ, un Trou de lapin vous fait gagner du terrain.
+          </p>
+        </div>
+        <div class="content_concept left">
+          <h3 class="reveal-text">Chance, stratégie et petits coups bas</h3>
+          <p class="reveal-text">
+            Cartes Mystère, cartes offensives (Hurlement, Distraction, Hibernation, Tornade) : ralentissez vos adversaires et protégez-vous pour décrocher la première part de tarte.
+          </p>
+        </div>
+      </div>
+      </section>
+      <section class="composant" id="composant">
+        <h2>Composant</h2>
+        <div class="composant_content">
+          <div class="model"></div>
+          <div class="pion-info">
+  <span class="pion-number">01 — THE DEER</span>
+  <h3 class="pion-title">Le cerf</h3>
+  <p class="pion-description">Le roi de la forêt.</p>
+</div>
+        </div>
+      </section>
+      <section class="cardsection" id="carte_section">
+  <h2>Les cartes</h2>
+
+  <div class="container">
+
+    <!-- BONUS -->
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/coup_de_pouce.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Coup de pouce</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Avance de 3 cases et prends une longueur d'avance sur tes adversaires !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/recolte.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Récolte abondante</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Ajoute 1 fruit à ta récolte et prépare-toi pour la suite de l'aventure !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/miel.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Pot de miel</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Protège-toi du prochain malus grâce à ton précieux pot de miel !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/renard.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Renard</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Un petit voleur rôde dans la forêt… Prends une carte à un joueur de ton choix !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MALUS -->
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/jour_malchance.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Jour de malchance</h1>
+          </div>
+          <div name="content">
+            <p slot="content">La chance n'est pas de ton côté aujourd'hui… Découvre le malus qui t'attend !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/terrain.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Terrain accidenté</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Le chemin devient difficile… Attention où tu mets les pattes !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/putois.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Putois</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Une mauvaise rencontre ! Recule de 3 cases pour échapper à son odeur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/loup.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Loup</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Le loup surgit ! Perds tous tes fruits et recule de 3 cases.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFFENSIVES -->
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/hurlement.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Hurlement</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Fais entendre ta voix dans la forêt et tente de déstabiliser tes adversaires !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/distraction.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Distraction</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Détourne l'attention de tes adversaires et profite de la confusion !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/hibernation.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Hibernation</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Prends le temps de souffler… Mais attention, la course continue !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/tornade.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Tornade</h1>
+          </div>
+          <div name="content">
+            <p slot="content">Déchaîne une tornade et fais reculer l'adversaire de ton choix de 6 cases !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRUITS -->
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/pomme.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Pomme</h1>
+          </div>
+          <div name="content">
+            <p slot="content">1 case. Une petite récolte pour commencer ton aventure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/poire.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Poire</h1>
+          </div>
+          <div name="content">
+            <p slot="content">2 cases. Une récolte un peu plus généreuse !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/fraise.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Fraise</h1>
+          </div>
+          <div name="content">
+            <p slot="content">3 cases. Un fruit savoureux qui te fait avancer !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/marron.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Marron</h1>
+          </div>
+          <div name="content">
+            <p slot="content">4 cases. Une belle trouvaille au détour du chemin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/mure.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Mûre</h1>
+          </div>
+          <div name="content">
+            <p slot="content">5 cases. Une récolte rare qui te rapproche de l'arrivée !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card">
+        <div class="card-bg">
+          <img src="public/img/carte_dos.png" class="img-card-bg" data-space="0.8" />
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-bg">
+          <img src="public/img/fond.png" class="img-card-bg" data-space="0.8" />
+          <img src="public/img/myrtille.png" class="img-card-bg" data-space="0.3" />
+        </div>
+        <div class="card-info">
+          <div name="header">
+            <h1 slot="header">Myrtille</h1>
+          </div>
+          <div name="content">
+            <p slot="content">6 cases. Le fruit le plus rare de la forêt… et le plus précieux !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+      <section class="Plateau" id="plateau">
+        <h2>Plateau</h2>
+      </section>
+      <section class="Gameplay_video" id="Gameplay_video">
+        <div class="video_gameplay">
+          <div class="stickyMask">
+            <video aria-label="Vidéo gameplay du jeu" autoplay loop>
+              <source
+                src="https://cdn.pixabay.com/video/2017/01/07/7118-198606833_large.mp4"
+                type="video/mp4"
+                
+              />
+              Votre navigateur ne prend pas en charge la lecture vidéo.
+            </video>
+          </div>
+        </div>
+      </section>
+      <section class="transition">
+        <h2>Prêts à courir ? Découvrez notre teaser.</h2>
+<p>Une tarte, six animaux, une seule part gagnante. Entrez dans la forêt.</p>
+      </section>
+      <section class="video_promo" id="video_promo">
+        <h2>Vidéo promo</h2>
+        <div class="sticky">
+
+      <div class="el">
+        <div class="imageContainer">
+          <video aria-label="Vidéo gameplay du jeu" autoplay loop>
+              <source
+                src="https://cdn.pixabay.com/video/2022/09/27/132793-754897675_large.mp4"
+                type="video/mp4"
+                
+              />
+              Votre navigateur ne prend pas en charge la lecture vidéo.
+            </video>
+        </div>
+      </div>
+
+      <div class="el">
+        <div class="imageContainer">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Image 2">
+        </div>
+      </div>
+
+      <div class="el">
+        <div class="imageContainer">
+          <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Image 3">
+        </div>
+      </div>
+
+      <div class="el">
+        <div class="imageContainer">
+          <img src="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Image 4">
+         
+        </div>
+      </div>
+
+      <div class="el">
+        <div class="imageContainer">
+          <img src="https://images.unsplash.com/photo-1426170042593-200f250dfdaf?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Image 5">
+        </div>
+      </div>
+
+      <div class="el">
+        <div class="imageContainer">
+          <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Image 6">
+        </div>
+      </div>
+
+      <div class="el">
+        <div class="imageContainer">
+          <img src="https://images.unsplash.com/photo-1758438919146-f3f59a6d2544?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Image 7">
+        </div>
+      </div>
+
+    </div>
+      </section>
+      <section class="online_game" id="jeu_online">
+        <h2>Jeu à tester</h2>
+      </section>
+      <section class="financement" id="financement">
+        <h2>Financement</h2>
+        <div class="financement_grid">
+          <div class="grid-content">
+          <div class="partie_dg_left">
+            <div class="donation_goal">
+              <div class="header_goal">
+                <h3>Venez financer notre projet</h3>
+                <p>
+                  The Forest Race est né de notre passion pour les jeux de société. Avec votre soutien, nous pourrons imprimer le jeu, produire les pions en 3D et offrir à la forêt la boîte qu’elle mérite. Chaque contribution nous rapproche de la maison de Grand-mère.
+                </p>
+                <div class="price_goal">
+                <div class="actual_score"><span>0€</span></div>
+                <div class="goal">/ 100,000€</div></div>
+                <div class="line">
+                  <div class="progress-line"></div>
+                </div>
+              </div>
+              <div class="choice">
+                <div class="choice_price">
+                  <button class="button-primary">1€</button>
+                  <button class="button-primary">10€</button>
+                  <button class="button-primary">50€</button>
+                  <button class="button-secondary">custom</button>
+                </div>
+                <div class="recurrence">
+                  <button class="button-secondary">Une fois</button>
+                  <button class="button-secondary">Par mois</button>
+                </div>
+                <button class="button-primary">Envoyer</button>
+              </div>
+              <p>Chaque euro compte. Merci de faire grandir la forêt !</p>
+            </div>
+          </div>
+          <div class="partie_dg_right">
+            <div class="card_img_dg">
+              <img src="https://images.unsplash.com/photo-1506452305024-9d3f02d1c9b5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="grid-footer">
+          <div class="milestone">
+            <h3>Milestone</h3>
+            <div class="milestone_content">
+              <div class="line_milestone">
+                <div class="progress_line_milestone"></div>
+              </div>
+              <div class="steps">
+              <div class="start_milestone"></div>
+              <div class="step"></div>
+              <div class="step"></div>
+              <div class="step"></div>
+              <div class="end_milestone"></div></div>
+            </div>
+            <div class="milestone_text">
+              <div class="palier">Pallier 1</div>
+              <div class="palier">Pallier 2</div>
+              <div class="palier">Pallier 3</div>
+              <div class="palier">Pallier 4</div>
+              <div class="palier">Pallier 5</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
     </main>
-    <footer id="footer"></footer>
-</body>
+ <footer id="footer">
+      <div class="footer_top">
+        <div class="animation_footer">
+          <div class="list_animaux">
+            <div class="lapin">
+              <div class="face">
+                <svg
+                  width="123"
+                  height="177"
+                  viewBox="0 0 123 177"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.25489 122.318C-6.54511 154.718 22.4215 166.151 38.7548 167.818C43.9215 178.318 84.9116 174.652 98.2548 167.818C118.755 157.318 126.255 134.318 115.755 119.818C112.49 115.309 107.255 94.3175 92.7548 84.8175C113.588 59.4842 129.755 7.3175 110.755 3.31752C74.6345 -4.28671 74.2548 62.3175 74.2548 75.3175C66.2548 71.8175 55.7548 73.4842 49.2548 75.3175C50.0882 47.9842 44.2548 -4.68248 14.2548 3.31752C-15.7452 11.3175 20.2548 72.3175 27.7548 84.8175C16.7548 93.3175 11.4524 115.318 8.25489 122.318Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M54.2548 137.318C57.0882 138.651 57.2548 140.818 60.7548 139.318C61.5017 138.997 62.1958 138.166 62.696 137.201M62.696 137.201C63.6936 135.276 63.9199 132.818 62.2548 132.818C60.7924 132.818 61.52 135.213 62.696 137.201ZM62.696 137.201C63.5305 138.612 64.5908 139.818 65.2548 139.818C68.2548 139.818 69.2548 137.484 70.2548 136.318M38.7548 167.818C22.4215 166.151 -6.54511 154.718 8.25489 122.318C11.4524 115.318 16.7548 93.3175 27.7548 84.8175C20.2548 72.3175 -15.7452 11.3175 14.2548 3.31752C44.2548 -4.68248 50.0882 47.9842 49.2548 75.3175C55.7548 73.4842 66.2548 71.8175 74.2548 75.3175C74.2548 62.3175 74.6345 -4.28671 110.755 3.31752C129.755 7.3175 113.588 59.4842 92.7548 84.8175C107.255 94.3175 112.49 115.309 115.755 119.818C126.255 134.318 118.755 157.318 98.2548 167.818C84.9116 174.652 43.9215 178.318 38.7548 167.818Z"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                    stroke="black"
+                  />
+                  <ellipse
+                    cx="21.7548"
+                    cy="139.318"
+                    rx="9.5"
+                    ry="7"
+                    fill="#D9D9D9"
+                  />
+                  <ellipse
+                    cx="101.755"
+                    cy="139.318"
+                    rx="9.5"
+                    ry="7"
+                    fill="#D9D9D9"
+                  />
+                  <path
+                    d="M37.7548 76.3175C24.2548 62.3175 10.8548 26.0175 19.2548 20.8175C27.6548 15.6175 39.7548 55.3175 37.7548 76.3175Z"
+                    fill="#FFCCAF"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#FFCCAF"
+                  />
+                  <path
+                    d="M84.4744 76.2824C97.9744 62.2823 111.374 25.9824 102.974 20.7824C94.5744 15.5824 82.4744 55.2823 84.4744 76.2824Z"
+                    fill="#FFCCAF"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#FFCCAF"
+                  />
+                </svg>
+
+                <div class="eyes">
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                </div>
+                <div class="arms">
+                  <div class="arm"></div>
+                  <div class="arm"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ours">
+              <div class="face">
+                <svg
+                  width="128"
+                  height="86"
+                  viewBox="0 0 128 86"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.8249 52.5761C8.09463 72.016 17.931 81.4254 23.4821 84.1993C48.3507 84.1993 98.8873 85.3311 111.41 83.2007C123.934 81.0703 125.732 50.9118 121.069 37.5968L121.101 37.5423C124.78 31.1911 132.953 17.0828 117.072 5.64064C102.751 -4.67843 91.0936 6.97223 86.7638 11.6325C74.1075 7.30511 47.7956 10.9667 37.1376 19.2886C29.4772 10.9667 13.8899 11.5658 6.16287 20.62C1.83307 25.6132 -3.829 40.5926 11.8249 52.5761Z"
+                    fill="#AF8B70"
+                    stroke-width="3"
+                    stroke="#643C29"
+                  />
+                  <path
+                    d="M26.749 24.7422C31.7314 27.75 28.825 33.9709 26.749 36.7053C25.2496 39.2119 20.6594 43.473 14.293 40.4652C7.92663 37.4573 10.915 30.1116 13.601 27.1348C15.6659 24.8463 21.7666 21.7343 26.749 24.7422Z"
+                    fill="#C8AD9E"
+                    stroke-width="3"
+                    stroke="#C8AD9E"
+                  />
+                  <path
+                    d="M98.2738 13.9844C93.8964 17.5458 97.4955 23.2004 99.8422 25.5825C101.607 27.8184 106.562 31.3551 112.265 27.6145C117.968 23.8738 114.142 17.1393 111.18 14.6012C108.902 12.65 102.651 10.423 98.2738 13.9844Z"
+                    fill="#C8AD9E"
+                    stroke-width="3"
+                    stroke="#C8AD9E"
+                  />
+                  <ellipse
+                    cx="69"
+                    cy="66.4997"
+                    rx="12.5"
+                    ry="12"
+                    fill="#D9D9D9"
+                  />
+                  <path
+                    d="M69.083 63.7447C68.0982 63.9361 60.4627 60.6508 67.5335 59.2768C75.4115 57.7459 70.0678 63.5533 69.083 63.7447Z"
+                    fill="#6A3932"
+                    stroke-width="3"
+                    stroke="#643C29"
+                  />
+                </svg>
+
+                <div class="eyes">
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                </div>
+                <div class="arms">
+                  <div class="arm">
+                    <svg
+                      width="36"
+                      height="27"
+                      viewBox="0 0 36 27"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.3281 1.9644C4.39863 -1.02301 1.39074 11.1303 1.50297 17.5804C1.50297 21.6947 6.18509 23.1535 9.27471 22.5071C9.67137 22.4242 10.0923 22.5353 10.3686 22.8317C14.4365 27.1957 16.6838 25.0959 18.5409 24.2233C18.8307 24.0871 19.164 24.1439 19.4353 24.314C23.2275 26.6912 26.6154 24.5477 28.3864 22.576C28.7982 22.1175 29.5199 22.0539 30.0749 22.3219C31.9517 23.2284 34.5 22.3992 34.5 16.2225C34.5 7.05658 33.4899 5.69867 17.3281 1.9644Z"
+                        fill="#AF8B70"
+                        stroke-width="3"
+                        stroke="#643C29"
+                      />
+                    </svg>
+                  </div>
+                  <div class="arm">
+                    <svg
+                      width="36"
+                      height="27"
+                      viewBox="0 0 36 27"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.6719 1.9644C31.6014 -1.02301 34.6092 11.1303 34.497 17.5804C34.497 21.6947 29.8149 23.1535 26.7253 22.5071C26.3286 22.4242 25.9077 22.5353 25.6313 22.8317C21.5635 27.1957 19.3161 25.0959 17.4591 24.2233C17.1693 24.0871 16.836 24.1439 16.5647 24.314C12.7725 26.6912 9.38463 24.5477 7.61359 22.576C7.20177 22.1175 6.48004 22.0539 5.92512 22.3219C4.04832 23.2284 1.5 22.3992 1.5 16.2225C1.5 7.05658 2.51011 5.69867 18.6719 1.9644Z"
+                        fill="#AF8B70"
+                        stroke-width="3"
+                        stroke="#643C29"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cerf">
+              <div class="face">
+                <svg
+                  width="118"
+                  height="106"
+                  viewBox="0 0 118 106"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    d="M1.53027 13.9023C-2.24929 37.5378 15.0457 40.6116 24.7053 39.135C25.0045 39.0892 25.2579 38.9086 25.3984 38.6404C30.1169 29.6364 29.7448 13.3969 2.52866 13.0642C2.04381 13.0583 1.60683 13.4235 1.53027 13.9023Z"
+                    fill="#D29A6B"
+                    stroke-width="2"
+                    stroke="black"
+                  />
+                  <path
+                    d="M115.831 13.9024C119.611 37.538 102.316 40.6118 92.6561 39.1351C92.3569 39.0894 92.1035 38.9087 91.963 38.6406C87.2445 29.6365 87.6166 13.397 114.833 13.0643C115.318 13.0584 115.755 13.4236 115.831 13.9024Z"
+                    fill="#D59963"
+                    stroke-width="2"
+                    stroke="black"
+                  />
+                  <use xlink:href="#stroke0_0_1" fill="#FDEBD5" />
+                  <mask id="stroke1_0_1" fill="white">
+                    <use xlink:href="#stroke0_0_1" />
+                  </mask>
+                  <path
+                    d="M109.673 76.7219C109.673 85.8284 96.6725 105.559 59.1725 105.559C21.6725 105.559 7.67255 85.8284 7.67255 76.7219C7.67255 37.7662 34.0436 20.0591 59.1725 20.0591C84.3015 20.0591 109.673 38.7781 109.673 76.7219Z"
+                    stroke-width="4"
+                    stroke="black"
+                    mask="url(#stroke1_0_1)"
+                  />
+                  <path
+                    d="M58.6725 78.5591C50.6725 78.5591 53.1725 45.0591 17.1725 44.0591C17.1725 44.0591 27.1725 21.5591 59.1725 21.5591C91.1725 21.5591 100.173 44.0591 100.173 44.0591C60.6725 44.5591 66.6725 78.5591 58.6725 78.5591Z"
+                    fill="#D29A69"
+                  />
+                  <mask id="stroke2_0_1" fill="white">
+                    <path
+                      d="M109.673 76.7219C109.673 85.8284 96.6725 105.559 59.1725 105.559C21.6725 105.559 7.67255 85.8284 7.67255 76.7219C7.67255 37.7662 34.0436 20.0591 59.1725 20.0591C84.3015 20.0591 109.673 38.7781 109.673 76.7219Z"
+                    />
+                  </mask>
+                  <path
+                    d="M109.673 76.7219C109.673 85.8284 96.6725 105.559 59.1725 105.559C21.6725 105.559 7.67255 85.8284 7.67255 76.7219C7.67255 37.7662 34.0436 20.0591 59.1725 20.0591C84.3015 20.0591 109.673 38.7781 109.673 76.7219Z"
+                    stroke-width="4"
+                    stroke="black"
+                    mask="url(#stroke2_0_1)"
+                  />
+                  <path
+                    d="M35.1726 19.5592C36.1321 20.1988 36.9424 22.373 37.3991 23.9855C37.5606 24.5561 38.1619 24.896 38.7244 24.7085L42.5787 23.4238C43.156 23.2313 43.4285 22.5725 43.1839 22.0153C42.4272 20.2909 41.6906 18.0591 42.6725 18.0591C44.1725 18.0591 47.6725 12.5591 46.1725 10.0591C44.6725 7.55914 40.1725 14.0591 40.1725 13.5591C40.1725 13.0591 42.1725 2.05917 37.6726 1.05917C33.1726 0.0591711 34.1725 12.0592 33.1725 11.5592C32.1725 11.0592 29.1726 8.05916 26.1726 11.0592C23.1726 14.0592 33.6726 18.5592 35.1726 19.5592Z"
+                    fill="#704B42"
+                    stroke-width="2"
+                    stroke="#35170F"
+                  />
+                  <path
+                    d="M82.0384 19.6184C81.0789 20.258 80.2686 22.4322 79.8119 24.0447C79.6503 24.6153 79.0491 24.9553 78.4865 24.7677L74.6323 23.483C74.0549 23.2905 73.7825 22.6317 74.027 22.0745C74.7837 20.3501 75.5203 18.1183 74.5384 18.1183C73.0384 18.1183 69.5384 12.6183 71.0384 10.1183C72.5384 7.61835 77.0384 14.1183 77.0384 13.6183C77.0384 13.1183 75.0384 2.11838 79.5384 1.11838C84.0384 0.118375 83.0384 12.1184 84.0384 11.6184C85.0384 11.1184 88.0384 8.11836 91.0384 11.1184C94.0384 14.1184 83.5384 18.6184 82.0384 19.6184Z"
+                    fill="#704B42"
+                    stroke-width="2"
+                    stroke="#35170F"
+                  />
+                  <ellipse
+                    cx="58.6725"
+                    cy="74.0591"
+                    rx="6"
+                    ry="4"
+                    fill="black"
+                  />
+                  <path
+                    d="M50.1725 80.5591C51.3392 82.3925 54.6725 85.0591 58.6725 81.0591M58.6725 81.0591C63.1725 85.0591 65.6725 83.0591 67.1725 81.0591M58.6725 81.0591V76.0591"
+                    stroke-width="3"
+                    stroke="black"
+                  />
+                  <ellipse
+                    cx="24.6725"
+                    cy="80.0591"
+                    rx="8"
+                    ry="6"
+                    fill="#EFC8BB"
+                  />
+                  <ellipse
+                    cx="92.6725"
+                    cy="80.0591"
+                    rx="8"
+                    ry="6"
+                    fill="#EBC3B7"
+                  />
+                  <circle cx="34.6725" cy="68.0591" r="6" fill="black" />
+                  <circle cx="81.6725" cy="68.0591" r="6" fill="black" />
+                  <path
+                    d="M58.1728 43.0591C59.5534 43.0593 60.6728 44.6262 60.6728 46.5591C60.6728 48.492 59.5534 50.059 58.1728 50.0591C56.792 50.0591 55.6728 48.4921 55.6728 46.5591C55.6728 44.6261 56.792 43.0591 58.1728 43.0591ZM65.6649 35.7427C66.7651 33.1615 69.2276 31.7383 71.1649 32.564C73.1021 33.3899 73.7807 36.1518 72.6806 38.733C71.5804 41.3142 69.1179 42.7373 67.1806 41.9117C65.2432 41.0859 64.5648 38.324 65.6649 35.7427ZM47.036 32.6089C49.0444 31.753 51.5307 33.0735 52.5898 35.5582C53.6488 38.0429 52.8794 40.751 50.871 41.607C48.8626 42.4629 46.3763 41.1425 45.3173 38.6578C44.2583 36.1731 45.0277 33.4649 47.036 32.6089ZM58.1728 27.0591C60.1057 27.0593 61.6728 29.074 61.6728 31.5591C61.6728 34.0443 60.1057 36.059 58.1728 36.0591C56.2398 36.0591 54.6728 34.0444 54.6728 31.5591C54.6728 29.0739 56.2398 27.0591 58.1728 27.0591ZM50.1728 25.0591C51.0011 25.0593 51.6728 25.7308 51.6728 26.5591C51.6728 27.3875 51.0011 28.059 50.1728 28.0591C49.3443 28.0591 48.6728 27.3876 48.6728 26.5591C48.6728 25.7307 49.3443 25.0591 50.1728 25.0591ZM67.1728 25.0591C68.0011 25.0593 68.6728 25.7308 68.6728 26.5591C68.6728 27.3875 68.0011 28.059 67.1728 28.0591C66.3443 28.0591 65.6728 27.3876 65.6728 26.5591C65.6728 25.7307 66.3443 25.0591 67.1728 25.0591Z"
+                    fill="#FBE7CE"
+                  />
+                  <defs>
+                    <path
+                      id="stroke0_0_1"
+                      d="M109.673 76.7219C109.673 85.8284 96.6725 105.559 59.1725 105.559C21.6725 105.559 7.67255 85.8284 7.67255 76.7219C7.67255 37.7662 34.0436 20.0591 59.1725 20.0591C84.3015 20.0591 109.673 38.7781 109.673 76.7219Z"
+                    />
+                  </defs>
+                </svg>
+
+                <div class="eyes">
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                </div>
+                <div class="arms">
+                  <div class="arm">
+                    <svg
+                      width="24"
+                      height="31"
+                      viewBox="0 0 24 31"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <path
+                        d="M20.949 1.08026L1.44904 3.08026C3.96475 9.01735 7.00974 17.2853 11.449 23.0803C14.5084 23.9141 21.4202 22.8803 22.949 18.0803C23.0355 11.7563 22.3649 6.03587 20.949 1.08026Z"
+                        fill="#D29A69"
+                      />
+                      <use xlink:href="#stroke0_54_235" fill="#6E4940" />
+                      <use xlink:href="#stroke0_54_235" fill="#D29A69" />
+                      <path
+                        d="M11.449 23.0803C14.3624 26.8832 18.7302 30.1897 20.949 29.0803C22.8981 28.1057 22.9198 23.448 22.938 19.5492C22.9403 19.0436 22.9426 18.5507 22.949 18.0803C21.4202 22.8803 14.5084 23.9141 11.449 23.0803Z"
+                        fill="#6F473B"
+                      />
+                      <path
+                        d="M11.449 23.0803C7.68416 18.1657 4.92213 11.4724 2.63529 5.93073C2.40985 5.38442 2.18903 4.84929 1.97231 4.32816C1.79523 3.90234 1.6209 3.48586 1.44904 3.08026M11.449 23.0803C7.00974 17.2853 3.96475 9.01735 1.44904 3.08026L2.79605 2.94211L20.1156 1.16574M21.445 2.97415C21.3576 2.6082 21.2663 2.24602 21.1713 1.88766C21.0994 1.61633 21.0253 1.34718 20.949 1.08026L1.44904 3.08026M20.949 1.08026C22.3649 6.03587 23.0355 11.7563 22.949 18.0803M20.949 1.08026L20.1156 1.16574M11.449 23.0803C14.3624 26.8832 18.7302 30.1897 20.949 29.0803C22.8981 28.1057 22.9198 23.448 22.938 19.5492C22.9403 19.0436 22.9426 18.5507 22.949 18.0803M11.449 23.0803C14.5084 23.9141 21.4202 22.8803 22.949 18.0803M22.949 18.0803C23.0247 12.5468 22.5207 7.47542 21.445 2.97415M2.79605 2.94211C2.12672 3.01075 1.71396 3.7069 1.97231 4.32816M20.1156 1.16574C20.5978 1.11628 21.0471 1.41914 21.1713 1.88766M20.1156 1.16574L21.445 2.97415"
+                        stroke-width="2"
+                        stroke="black"
+                      />
+                      <defs>
+                        <path
+                          id="stroke0_54_235"
+                          d="M22.949 18.0803C23.0247 12.5468 22.5207 7.47542 21.445 2.97415L20.1156 1.16574L2.79605 2.94211L1.44904 3.08026C1.6209 3.48586 1.79523 3.90234 1.97231 4.32816C2.18903 4.84929 2.40985 5.38442 2.63529 5.93073C4.92213 11.4724 7.68416 18.1657 11.449 23.0803C14.5084 23.9141 21.4202 22.8803 22.949 18.0803Z"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="arm">
+                    <svg
+                      width="24"
+                      height="31"
+                      viewBox="0 0 24 31"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <path
+                        d="M3.00739 1.08026L22.5074 3.08026C19.9917 9.01735 16.9467 17.2853 12.5074 23.0803C9.44806 23.9141 2.5362 22.8803 1.00739 18.0803C0.920923 11.7563 1.5915 6.03587 3.00739 1.08026Z"
+                        fill="#D29A69"
+                      />
+                      <use xlink:href="#stroke0_54_236" fill="#6E4940" />
+                      <use xlink:href="#stroke0_54_236" fill="#D29A69" />
+                      <path
+                        d="M12.5074 23.0803C9.59407 26.8832 5.22626 30.1897 3.00739 29.0803C1.0583 28.1057 1.03662 23.448 1.01847 19.5492C1.01611 19.0436 1.01382 18.5507 1.00739 18.0803C2.5362 22.8803 9.44806 23.9141 12.5074 23.0803Z"
+                        fill="#6F473B"
+                      />
+                      <path
+                        d="M12.5074 23.0803C16.2723 18.1657 19.0343 11.4724 21.3211 5.93073C21.5466 5.38442 21.7674 4.84929 21.9841 4.32816C22.1612 3.90234 22.3355 3.48586 22.5074 3.08026M12.5074 23.0803C16.9467 17.2853 19.9917 9.01735 22.5074 3.08026L21.1604 2.94211L3.84078 1.16574M2.51139 2.97415C2.59884 2.6082 2.69007 2.24602 2.78508 1.88766C2.85702 1.61633 2.93112 1.34718 3.00739 1.08026L22.5074 3.08026M3.00739 1.08026C1.5915 6.03587 0.920923 11.7563 1.00739 18.0803M3.00739 1.08026L3.84078 1.16574M12.5074 23.0803C9.59407 26.8832 5.22627 30.1897 3.00739 29.0803C1.0583 28.1057 1.03662 23.448 1.01847 19.5492C1.01611 19.0436 1.01382 18.5507 1.00739 18.0803M12.5074 23.0803C9.44806 23.9141 2.5362 22.8803 1.00739 18.0803M1.00739 18.0803C0.93173 12.5468 1.43568 7.47542 2.51139 2.97415M21.1604 2.94211C21.8297 3.01075 22.2425 3.7069 21.9841 4.32816M3.84078 1.16574C3.35861 1.11628 2.9093 1.41914 2.78508 1.88766M3.84078 1.16574L2.51139 2.97415"
+                        stroke-width="2"
+                        stroke="black"
+                      />
+                      <defs>
+                        <path
+                          id="stroke0_54_236"
+                          d="M1.00739 18.0803C0.93173 12.5468 1.43568 7.47542 2.51139 2.97415L3.84078 1.16574L21.1604 2.94211L22.5074 3.08026C22.3355 3.48586 22.1612 3.90234 21.9841 4.32816C21.7674 4.84929 21.5466 5.38442 21.3211 5.93073C19.0343 11.4724 16.2723 18.1657 12.5074 23.0803C9.44806 23.9141 2.5362 22.8803 1.00739 18.0803Z"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ecureuil">
+              <div class="face">
+                <svg
+                  width="115"
+                  height="114"
+                  viewBox="0 0 115 114"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.01254 66.5C-7.78746 89.3 17.5127 103.5 31.0127 107C37.3047 108.631 49.3125 116.6 84.5125 107C119.713 97.4 115.179 74 108.513 63.5C108.513 60 110.513 48 100.513 32.5C103.013 9.00001 90.0125 1.5 87.5125 1.5C85.5125 1.5 80.6792 11.8333 78.5125 17C78.5125 17 74.3754 14.9806 71.5127 14.5C68.8167 14.0474 64.5125 14.5 64.5125 14.5C64.5125 14.5 66.018 10.2956 64.5125 8.5C62.2095 5.75318 60.0434 13.6182 56.5125 13C53.7789 12.5214 53.604 7.50701 51.0125 8.5C48.7062 9.38376 49.0125 14.5 49.0125 14.5C49.0125 14.5 45.3173 14.534 43.0127 14.9999C40.5918 15.4894 37.0127 16.9999 37.0127 16.9999L36.9036 16.7599C34.3837 11.2143 29.9695 1.49994 27.0125 1.5C15.5067 1.50025 13.5127 31 15.5127 34C10.5128 38 6.5127 52 5.01254 66.5Z"
+                    fill="#D27E42"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="black"
+                  />
+                  <path
+                    d="M108.512 63.4998C115.179 73.9998 119.712 97.3998 84.512 107C49.3121 116.6 37.3039 108.631 31.012 107C17.5119 103.5 -7.78789 89.2995 5.01196 66.4998L8.01196 63.4998C9.51193 64.4998 14.2122 66.4997 21.012 66.4998C27.8116 66.4998 33.845 70.8331 36.012 72.9998C40.3452 70.8332 50.4119 66.5001 56.012 66.4998C61.6118 66.4998 72.6784 70.1664 77.512 71.9998C80.8452 70.6665 88.7119 68 93.512 67.9998C98.3119 67.9998 105.512 64.9998 108.512 63.4998ZM18.512 13.9998C20.1117 10.8003 22.5117 11 23.512 11.4998C25.012 12.2498 29.812 22.2998 27.012 23.4998C24.2119 24.7001 18.8452 29.9999 16.512 32.4998C15.5121 28.4996 16.512 17.9997 18.512 13.9998ZM91.3733 11.2859C92.3735 10.7861 94.7735 10.5865 96.3733 13.7859C98.3732 17.7858 99.3731 28.2856 98.3733 32.2859C96.0399 29.7859 90.6733 24.486 87.8733 23.2859C85.0733 22.0859 89.8733 12.0359 91.3733 11.2859Z"
+                    fill="#FAA785"
+                  />
+                  <ellipse
+                    cx="19.0127"
+                    cy="78.9999"
+                    rx="9"
+                    ry="7"
+                    fill="#FAA183"
+                  />
+                  <ellipse
+                    cx="96.0127"
+                    cy="78.9999"
+                    rx="9"
+                    ry="7"
+                    fill="#FAA183"
+                  />
+                  <path
+                    d="M62.0127 68.4999C62.0127 70.4329 59.3264 73.4999 56.0127 73.4999C52.699 73.4999 50.0127 70.4329 50.0127 68.4999C50.0127 66.5669 52.699 64.9999 56.0127 64.9999C59.3264 64.9999 62.0127 66.5669 62.0127 68.4999Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M44.5127 77.0001C45.2367 79.7513 47.9484 83.685 53.3691 80.4728C55.0173 79.4961 57.0845 79.4035 58.7635 80.3263C64.9784 83.742 66.6899 79.2045 68.0127 77.0001"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="black"
+                  />
+                  <circle cx="28.5127" cy="63.4999" r="9.5" fill="#D9D9D9" />
+                  <circle cx="84.5127" cy="63.4999" r="9.5" fill="#D9D9D9" />
+                  <path
+                    d="M31.0127 107C17.5127 103.5 -7.78746 89.3 5.01254 66.5C6.5127 52 10.5128 38 15.5127 34C13.5127 31 15.5067 1.50025 27.0125 1.5C29.9695 1.49994 34.3837 11.2143 36.9036 16.7599L37.0127 16.9999C37.0127 16.9999 40.5918 15.4894 43.0127 14.9999C45.3173 14.534 49.0125 14.5 49.0125 14.5C49.0125 14.5 48.7062 9.38376 51.0125 8.5C53.604 7.50701 53.7789 12.5214 56.5125 13C60.0434 13.6182 62.2095 5.75318 64.5125 8.5C66.018 10.2956 64.5125 14.5 64.5125 14.5C64.5125 14.5 68.8167 14.0474 71.5127 14.5C74.3754 14.9806 78.5125 17 78.5125 17C80.6792 11.8333 85.5125 1.5 87.5125 1.5C90.0125 1.5 103.013 9.00001 100.513 32.5C110.513 48 108.513 60 108.513 63.5C115.179 74 119.713 97.4 84.5125 107C49.3125 116.6 37.3047 108.631 31.0127 107Z"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="black"
+                  />
+                </svg>
+
+                <div class="eyes">
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                </div>
+                <div class="arms">
+                  <div class="arm">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <use xlink:href="#stroke0_63_95" fill="#D27E42" />
+                      <use xlink:href="#stroke0_63_95" fill="#D27E42" />
+                      <use xlink:href="#stroke1_63_95" fill="#D27E42" />
+                      <use xlink:href="#stroke1_63_95" fill="#69351A" />
+                      <path
+                        d="M10.5627 22.712C2.28617 16.3557 1.11016 6.77368 1.59159 1.52681L23.729 1.95632C23.9052 3.1568 25.6575 4.9273 26.3879 13.9221C26.9895 21.3308 24.2995 21.448 21.5365 17.758C24.099 25.3786 18.929 23.3238 16.0236 21.3439C19.9185 24.7057 18.2424 27.4739 12.9951 24.3568C12.1231 23.8389 11.3137 23.2887 10.5627 22.712ZM26.3879 13.9221C20.0735 10.6285 13.2068 18.4097 10.5627 22.712"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke="black"
+                      />
+                      <defs>
+                        <path
+                          id="stroke0_63_95"
+                          d="M26.3879 13.9221C25.6575 4.9273 23.9052 3.1568 23.729 1.95632L1.59159 1.52681C1.11016 6.77368 2.28617 16.3557 10.5627 22.712C13.2068 18.4097 20.0735 10.6285 26.3879 13.9221Z"
+                        />
+                        <path
+                          id="stroke1_63_95"
+                          d="M12.9951 24.3568C18.2424 27.4739 19.9185 24.7057 16.0236 21.3439C18.929 23.3238 24.099 25.3786 21.5365 17.758C24.2995 21.448 26.9895 21.3308 26.3879 13.9221C20.0735 10.6285 13.2068 18.4097 10.5627 22.712C11.3137 23.2887 12.1231 23.8389 12.9951 24.3568Z"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="arm">
+                    <svg
+                      width="29"
+                      height="28"
+                      viewBox="0 0 29 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <use xlink:href="#stroke0_63_98" fill="#D27E42" />
+                      <use xlink:href="#stroke0_63_98" fill="#D27E42" />
+                      <use xlink:href="#stroke1_63_98" fill="#D27E42" />
+                      <use xlink:href="#stroke1_63_98" fill="#69351A" />
+                      <path
+                        d="M16.9374 23.1766C25.6331 17.407 27.468 7.92907 27.35 2.66149L5.23576 1.5613C4.97706 2.74675 3.1067 4.39202 1.75694 13.3149C0.645188 20.6644 3.3207 20.967 6.33189 17.4767C3.24929 24.9021 8.54884 23.2093 11.5839 21.4347C7.46621 24.5195 8.94721 27.3968 14.3972 24.6496C15.3029 24.193 16.1483 23.7001 16.9374 23.1766ZM1.75694 13.3149C8.28372 10.4652 14.5967 18.702 16.9374 23.1766"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke="black"
+                      />
+                      <defs>
+                        <path
+                          id="stroke0_63_98"
+                          d="M1.75694 13.3149C3.1067 4.39202 4.97706 2.74675 5.23576 1.5613L27.35 2.66149C27.468 7.92907 25.6331 17.407 16.9374 23.1766C14.5967 18.702 8.28372 10.4652 1.75694 13.3149Z"
+                        />
+                        <path
+                          id="stroke1_63_98"
+                          d="M14.3972 24.6496C8.94721 27.3968 7.46621 24.5195 11.5839 21.4347C8.54884 23.2093 3.24929 24.9021 6.33189 17.4767C3.3207 20.967 0.645188 20.6644 1.75694 13.3149C8.28372 10.4652 14.5967 18.702 16.9374 23.1766C16.1483 23.7001 15.3029 24.193 14.3972 24.6496Z"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hibou">
+              <div class="face">
+                <svg
+                  width="108"
+                  height="84"
+                  viewBox="0 0 108 84"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.157 19.0462C-3.44298 34.2462 0.657025 59.0462 4.65702 69.5462C22.157 86.046 92.257 88.3461 102.657 67.5461C113.057 46.7461 101.99 24.8795 95.157 16.5461C95.157 16.5461 102.698 6.04615 101.157 3.04606C99.6165 0.0459692 84.657 6.0461 78.657 8.0461C54.257 -4.3539 35.157 2.21279 28.657 8.04613C28.657 8.04613 10.1571 0.546091 6.65704 3.04612C4.15702 4.83184 9.65704 15.5461 12.157 19.0462Z"
+                    fill="#B5845C"
+                    stroke-width="2"
+                    stroke="#4D2814"
+                  />
+                  <path
+                    d="M91.157 28.546C71.657 6.54605 54.657 33.546 53.657 34.046C34.657 8.04613 18.657 25.046 15.157 28.546C6.81286 36.8902 8.65702 59.046 27.157 69.5462C45.657 80.0463 71.657 73.5459 77.657 70.546C83.657 67.5461 110.657 50.546 91.157 28.546Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M57.657 52.546C57.657 56.6882 55.09 60.046 53.157 60.046C51.224 60.046 48.657 56.6882 48.657 52.546C48.657 48.4039 51.224 45.046 53.157 45.046C55.09 45.046 57.657 48.4039 57.657 52.546Z"
+                    fill="#EFA60C"
+                  />
+                </svg>
+
+                <div class="eyes">
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grenouille">
+              <div class="face">
+                <svg
+                  width="114"
+                  height="80"
+                  viewBox="0 0 114 80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.3864 28.1782C-9.19152 45.6579 9.27985 63.0197 12.0639 66.6346C12.3205 66.9677 12.6522 67.3149 13.048 67.4567C35.3221 75.4376 82.2851 86.2387 100.904 67.2241C119.318 48.4181 110.294 33.3536 102.398 26.6353C102.098 26.38 101.97 25.98 102.063 25.5973C103.868 18.1757 103.086 8.5861 91.9036 3.72414C75.5366 -3.39198 70.2426 8.41962 65.8392 13.2658C65.5793 13.5518 65.173 13.6386 64.8033 13.526C59.5318 11.9204 51.4396 12.7833 47.244 13.5594C46.7589 13.6491 46.2787 13.3821 46.0831 12.9292C44.303 8.80751 39.5848 2.22692 27.4036 2.72411C8.00738 3.51579 9.64863 22.504 10.7286 27.0875C10.8216 27.482 10.6887 27.9083 10.3864 28.1782Z"
+                    fill="#BAE685"
+                    stroke-width="3"
+                    stroke="#2C5F1A"
+                  />
+                  <path
+                    d="M43.4036 39.7241C47.0702 42.3908 57.6036 46.1241 70.4036 39.7241"
+                    stroke-width="3"
+                    stroke="black"
+                  />
+                  <circle cx="52.9036" cy="29.7241" r="1" fill="black" />
+                  <circle cx="60.9036" cy="29.7241" r="1" fill="black" />
+                  <ellipse
+                    cx="17.9036"
+                    cy="41.2241"
+                    rx="8"
+                    ry="6.5"
+                    fill="#FBCFA0"
+                  />
+                  <ellipse
+                    cx="94.9036"
+                    cy="41.2241"
+                    rx="8"
+                    ry="6.5"
+                    fill="#FBD0A1"
+                  />
+                </svg>
+
+                <div class="eyes">
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                </div>
+                <div class="arms">
+                  <div class="arm">
+                    <svg
+                      width="28"
+                      height="29"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.74689 20.3693C6.83061 17.453 3.11399 11.2675 1.54787 6.39039C1.37142 5.84089 1.72557 5.27359 2.29149 5.1604L20.4979 1.51912C20.9401 1.43068 21.3891 1.64744 21.5721 2.05959C23.9316 7.3741 24.0596 14.7694 23.7899 18.3621C23.7658 18.6829 23.8901 18.994 24.1146 19.2242C25.0428 20.1759 27.2671 22.8491 25.2469 24.8693C22.6189 27.4973 21.9934 22.9961 20.2469 23.8693C19.0119 24.4868 19.1219 26.7443 17.7469 26.8693C16.2281 27.0074 15.1168 22.8898 14.7469 24.3693C14.4136 25.7027 12.9469 28.0693 9.74689 26.8693C5.74689 25.3693 10.2469 20.8693 9.74689 20.3693Z"
+                        fill="#B5E279"
+                        stroke-width="3"
+                        stroke="#28560F"
+                      />
+                    </svg>
+                  </div>
+                  <div class="arm">
+                    <svg
+                      width="28"
+                      height="29"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.8221 20.3693C20.7383 17.453 24.455 11.2675 26.0211 6.39039C26.1975 5.84089 25.8434 5.27359 25.2774 5.1604L7.07102 1.51912C6.62882 1.43068 6.1798 1.64744 5.99681 2.05959C3.63734 7.3741 3.50937 14.7694 3.77907 18.3621C3.80315 18.6829 3.67889 18.994 3.45429 19.2242C2.52613 20.1759 0.301842 22.8491 2.32205 24.8693C4.95003 27.4973 5.57557 22.9961 7.32205 23.8693C8.557 24.4868 8.44701 26.7443 9.82205 26.8693C11.3408 27.0074 12.4522 22.8898 12.8221 24.3693C13.1554 25.7027 14.6221 28.0693 17.8221 26.8693C21.8221 25.3693 17.3221 20.8693 17.8221 20.3693Z"
+                        fill="#B5E279"
+                        stroke-width="3"
+                        stroke="#28560F"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="raton_laveur">
+              <div class="face">
+                <svg
+                  width="123"
+                  height="86"
+                  viewBox="0 0 123 86"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M32.5814 83.1186L61.0814 84.6186C60.0814 84.566 61.6814 84.4923 76.0814 84.6186C90.4814 84.7449 102.415 77.6712 106.581 74.1186C113.248 67.9519 125.381 55.6186 120.581 55.6186C115.781 55.6186 109.248 41.2853 106.581 34.1186C112.581 25.9519 117.081 10.1187 109.581 3.61865C102.446 -2.56574 86.0814 7.61862 78.5814 14.1186C68.9814 8.91862 51.5814 11.9519 43.5814 14.1186C37.2481 4.28526 18.1269 -2.84011 13.5814 2.1186C2.58142 14.1186 15.4759 31.3297 14.5814 33.1186C11.5814 39.1186 9.44787 44.8788 7.58142 47.1186C2.58142 53.1186 6.58142 49.1186 0.581424 54.6186C-1.01858 62.6186 21.4147 77.2853 32.5814 83.1186Z"
+                    fill="white"
+                    stroke="black"
+                  />
+                  <path
+                    d="M53.0814 31.6184C47.0814 23.2184 20.9147 39.7851 8.58141 49.1184C4.58141 52.6186 11.5814 39.1186 14.5814 33.6186C15.5572 31.8296 19.4895 30.8681 20.9163 29.6186C18.138 24.1186 13.4814 12.3186 17.0814 9.11859C20.6814 5.91859 29.7481 13.7634 34.0814 18.6187C58.0814 6.11865 75.4193 12.5578 83.5814 15.6186C85.0857 16.1827 86.59 18.9072 88.0814 19.7608C91.7481 15.3801 100.181 7.31861 104.581 10.1186C108.981 12.9186 104.081 24.782 101.081 30.3637C109.081 34.6186 114.682 52.6186 114.081 52.1184C99.0814 39.6184 78.5814 29.6184 71.0814 29.6184C65.0814 29.6184 64.2481 46.2851 64.5814 54.6184H56.5814C56.5814 49.1184 59.0814 40.0184 53.0814 31.6184Z"
+                    fill="#9A9A96"
+                  />
+                  <path
+                    d="M53.7395 47.1245C57.2395 55.6246 48.7395 58.1245 42.7395 63.6246C36.7395 69.1246 21.4396 72.6246 17.2396 65.6246C13.0396 58.6246 16.7395 53.6245 29.2395 46.1245C41.7395 38.6246 50.2395 38.6244 53.7395 47.1245Z"
+                    fill="#31302E"
+                  />
+                  <path
+                    d="M67.3993 48.1245C63.8993 56.6246 72.3993 59.1245 78.3993 64.6246C84.3993 70.1246 99.6992 73.6246 103.899 66.6246C108.099 59.6246 104.399 54.6245 91.8993 47.1245C79.3993 39.6246 70.8993 39.6244 67.3993 48.1245Z"
+                    fill="#31302E"
+                  />
+                  <path
+                    d="M65.5814 60.1187C65.5814 62.0516 63.119 64.6187 60.0814 64.6187C57.0439 64.6187 54.5814 62.0516 54.5814 60.1187C54.5814 58.1857 57.0439 56.6187 60.0814 56.6187C63.119 56.6187 65.5814 58.1857 65.5814 60.1187Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M53.5814 66.1187C54.4148 67.6187 56.8814 69.8187 60.0814 66.6187C63.5814 69.6187 65.5814 67.1187 66.5814 66.1187"
+                    stroke="black"
+                  />
+                  <path
+                    d="M61.0814 84.6186L32.5814 83.1186C21.4147 77.2853 -1.01858 62.6186 0.581424 54.6186C6.58142 49.1186 2.58142 53.1186 7.58142 47.1186C9.44787 44.8788 11.5814 39.1186 14.5814 33.1186C15.4759 31.3297 2.58142 14.1186 13.5814 2.1186C18.1269 -2.84011 37.2481 4.28526 43.5814 14.1186C51.5814 11.9519 68.9814 8.91862 78.5814 14.1186C86.0814 7.61862 102.446 -2.56574 109.581 3.61865C117.081 10.1187 112.581 25.9519 106.581 34.1186C109.248 41.2853 115.781 55.6186 120.581 55.6186C125.381 55.6186 113.248 67.9519 106.581 74.1186C102.415 77.6712 90.4814 84.7449 76.0814 84.6186C61.6814 84.4923 60.0814 84.566 61.0814 84.6186Z"
+                    stroke="black"
+                  />
+                </svg>
+
+                <div class="eyes">
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                </div>
+                <div class="arms">
+                  <div class="arm">
+                    <svg
+                      width="25"
+                      height="19"
+                      viewBox="0 0 25 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M22.8638 7.63091C23.1825 10.0613 23.1862 13.8821 21.0103 15.6475C20.3368 16.1939 18.3502 15.2336 17.5103 15.6475C16.1723 16.3068 15.6578 15.4314 14.0103 15.6475C13.3053 15.7399 11.5968 17.1276 10.9169 17.1223C9.90582 17.1143 8.92975 17.9034 8.01025 17.6989C4.26466 16.8656 1.45788 13.5974 1.05056 10.4918C0.476016 6.111 4.8933 1.91927 10.9169 1.12927C16.9404 0.339264 22.2892 3.25015 22.8638 7.63091Z"
+                        fill="#383836"
+                      />
+                      <path
+                        d="M14.0103 15.6475C13.3053 15.7399 11.5968 17.1276 10.9169 17.1223M14.0103 15.6475L10.9169 17.1223M14.0103 15.6475C15.6578 15.4314 16.1723 16.3068 17.5103 15.6475M10.9169 17.1223L11.5103 12.6989M10.9169 17.1223C9.90582 17.1143 8.92975 17.9034 8.01025 17.6989C4.26466 16.8656 1.45788 13.5974 1.05056 10.4918C0.476016 6.111 4.8933 1.91927 10.9169 1.12927C16.9404 0.339264 22.2892 3.25015 22.8638 7.63091C23.1825 10.0613 23.1862 13.8821 21.0103 15.6475C20.3368 16.1939 18.3502 15.2336 17.5103 15.6475M17.0103 12.1989L17.5103 15.6475"
+                        stroke-width="2"
+                        stroke="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="arm">
+                    <svg
+                      width="25"
+                      height="19"
+                      viewBox="0 0 25 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.15272 7.63091C0.833974 10.0613 0.830302 13.8821 3.00623 15.6475C3.6797 16.1939 5.66628 15.2336 6.50623 15.6475C7.84414 16.3068 8.35871 15.4314 10.0062 15.6475C10.7112 15.7399 12.4197 17.1276 13.0996 17.1223C14.1107 17.1143 15.0867 17.9034 16.0062 17.6989C19.7518 16.8656 22.5586 13.5974 22.9659 10.4918C23.5405 6.111 19.1232 1.91927 13.0996 1.12927C7.07608 0.339264 1.72727 3.25015 1.15272 7.63091Z"
+                        fill="#383836"
+                      />
+                      <path
+                        d="M10.0062 15.6475C10.7112 15.7399 12.4197 17.1276 13.0996 17.1223M10.0062 15.6475L13.0996 17.1223M10.0062 15.6475C8.35871 15.4314 7.84414 16.3068 6.50623 15.6475M13.0996 17.1223L12.5062 12.6989M13.0996 17.1223C14.1107 17.1143 15.0867 17.9034 16.0062 17.6989C19.7518 16.8656 22.5586 13.5974 22.9659 10.4918C23.5405 6.111 19.1232 1.91927 13.0996 1.12927C7.07608 0.339264 1.72727 3.25015 1.15272 7.63091C0.833974 10.0613 0.830302 13.8821 3.00623 15.6475C3.6797 16.1939 5.66628 15.2336 6.50623 15.6475M7.00623 12.1989L6.50623 15.6475"
+                        stroke-width="2"
+                        stroke="black"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sanglier">
+              <div class="face">
+                <svg
+                  width="116"
+                  height="94"
+                  viewBox="0 0 116 94"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.6862 39.885C14.5697 47.1635 2.48179 61.1259 2 62.0895L1.00667 64.7384C0.761513 65.3921 1.24479 66.0895 1.943 66.0895H2.32578C3.08246 66.0895 3.56756 66.8982 3.22224 67.5715C2.02207 69.9115 0.5 73.1203 0.5 74.0895C0.5 74.6405 0.99204 74.5801 1.63719 74.2566C2.48671 73.8308 3.61823 74.4983 3.43187 75.4301L2.37282 80.7254C2.21491 81.5149 3.00725 82.1578 3.74732 81.8406L4.69769 81.4333C5.15732 81.2363 5.69181 81.4092 5.9491 81.838L11.2276 90.6354C11.398 90.9195 11.6848 91.1 12.0155 91.1185C41.6976 92.7795 101.432 94.7594 107 89.5895C111.579 85.3376 112.458 79.6817 112.262 76.1205C112.223 75.4008 113.083 74.8628 113.669 75.2818C114.275 75.7142 115.086 75.1416 114.882 74.4262L113.754 70.4795C113.627 70.0335 113.962 69.5895 114.426 69.5895C114.931 69.5895 115.269 69.0694 115.064 68.6077L113.724 65.5924C113.584 65.2793 113.615 64.9167 113.805 64.6316L115.109 62.676C115.343 62.3243 115.331 61.8631 115.079 61.5241L98.7943 39.6561C98.3967 39.1222 98.6243 38.3552 99.2189 38.056C110.047 32.6083 110.654 12.5194 109 10.5895C101.867 2.26818 88.6689 9.89045 83.6163 14.0623C83.2497 14.365 82.7267 14.3844 82.3463 14.0992L81.205 13.2431C81.0705 13.1423 80.9128 13.077 80.7464 13.0532L78.3586 12.7121C77.8659 12.6417 77.5 12.2198 77.5 11.7221V9.89219C77.5 9.69477 77.4416 9.50176 77.332 9.33749L75.9501 7.26454C75.6878 6.87107 75.1857 6.71514 74.7466 6.89076L71.3543 8.24769C70.8714 8.44084 70.3211 8.23161 70.0885 7.76643L69.5 6.58942L67.2245 3.1762C66.8593 2.62836 66.0735 2.57688 65.6399 3.07239L63.7526 5.22933C63.3542 5.68466 62.6458 5.68466 62.2474 5.22933L59.6942 2.3114C59.5674 2.1665 59.4015 2.06128 59.2164 2.00838L54.0769 0.53997C53.3571 0.334299 52.6748 0.963492 52.8216 1.69761L53.5659 5.41881C53.7347 6.26284 52.8292 6.91162 52.0843 6.48035L46.4934 3.24348C45.7364 2.80522 44.8212 3.48146 45.0179 4.33376L45.4861 6.36233C45.6821 7.212 44.7726 7.88807 44.0155 7.45543L40.4961 5.44435C39.8295 5.06341 39 5.54477 39 6.3126V10.1752C39 10.4404 38.8946 10.6948 38.7071 10.8823L36.5 13.0894L34.365 14.8686C33.9048 15.2522 33.2145 15.1454 32.857 14.6647C26.3618 5.93019 14.8369 7.59869 7.98921 10.3851C7.68078 10.5106 7.46074 10.794 7.40174 11.1217C4.27065 28.5147 11.0048 35.1099 17.2492 38.6735C17.6785 38.9184 17.8807 39.4307 17.6862 39.885Z"
+                    fill="#7A6C65"
+                    stroke="black"
+                  />
+                  <path
+                    d="M73.4998 79.5895C84.8478 71.1491 69.6719 58.635 59.6456 55.7629C59.2254 55.6425 58.7938 55.6762 58.3946 55.8543C53.5225 58.0278 34.083 67.6726 45.9998 79.5895C49.6827 82.7813 54.7561 80.5258 59.5 80.5894C64.4169 80.6554 69.017 82.9237 73.4998 79.5895Z"
+                    fill="#EE928D"
+                    stroke="black"
+                  />
+                  <ellipse cx="25" cy="61.0894" rx="7" ry="5" fill="#EE928D" />
+                  <ellipse cx="93" cy="61.0894" rx="7" ry="5" fill="#EE928D" />
+
+                  <path
+                    d="M16 13.5894C19.3333 15.7561 26.2 20.9894 27 24.5894"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="black"
+                  />
+                  <path
+                    d="M99 14.0894C95.6667 16.2561 88.8 21.4894 88 25.0894"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke="black"
+                  />
+                  <path
+                    d="M54.6841 72.9885C53.2357 74.8183 51.6325 76.1759 50.1325 74.9885C48.6324 73.8012 48.8949 71.7819 50.7637 69.8852C52.6324 67.9885 53.6015 67.6316 54.684 68.4885C55.7666 69.3455 56.1324 71.1588 54.6841 72.9885Z"
+                    fill="#4F2F2A"
+                  />
+                  <path
+                    d="M64.1899 72.9885C65.6383 74.8183 67.2415 76.1759 68.7415 74.9885C70.2415 73.8012 69.9791 71.7819 68.1103 69.8852C66.2415 67.9885 65.2725 67.6316 64.1899 68.4885C63.1073 69.3455 62.7415 71.1588 64.1899 72.9885Z"
+                    fill="#4F2F2A"
+                  />
+                </svg>
+
+                <div class="eyes">
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                  <div class="eye">
+                    <div class="pupil"></div>
+                  </div>
+                </div>
+                <div class="arms">
+                  <div class="arm">
+                    <svg
+                      width="29"
+                      height="28"
+                      viewBox="0 0 29 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.0374 22.5802C14.0374 22.5802 0.705437 2.63489 1.53738 2.08017C4.53735 0.0798341 25.0374 3.57977 25.5374 7.58017C26.3373 13.9802 23.8707 20.2468 22.5374 22.5802L18.5374 20.5802L14.0374 22.5802Z"
+                        fill="#57463F"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke="black"
+                      />
+                      <ellipse
+                        cx="15.0376"
+                        cy="20.5799"
+                        rx="4"
+                        ry="5"
+                        fill="black"
+                      />
+                      <ellipse
+                        cx="21.9465"
+                        cy="20.3882"
+                        rx="4.23625"
+                        ry="5.44068"
+                        transform="rotate(-28.799 21.9465 20.3882)"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="arm">
+                    <svg
+                      width="29"
+                      height="28"
+                      viewBox="0 0 29 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.2425 22.5802C14.2425 22.5802 27.5744 2.63489 26.7425 2.08017C23.7425 0.0798341 3.24249 3.57977 2.74247 7.58017C1.94252 13.9802 4.40914 20.2468 5.74247 22.5802L9.74247 20.5802L14.2425 22.5802Z"
+                        fill="#57463F"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke="black"
+                      />
+                      <ellipse
+                        cx="4"
+                        cy="5"
+                        rx="4"
+                        ry="5"
+                        transform="matrix(-1 0 0 1 17.2422 15.5799)"
+                        fill="black"
+                      />
+                      <ellipse
+                        cx="4.23625"
+                        cy="5.44068"
+                        rx="4.23625"
+                        ry="5.44068"
+                        transform="matrix(-0.876315 -0.481738 -0.481738 0.876315 12.6666 17.6612)"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content_footer">
+          <nav class="nav_footer_left">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#boite_3D">Boite 3D</a></li>
+              <li><a href="#concept">Concept</a></li>
+              <li><a href="#composant">Composant</a></li>
+              <li><a href="#carte_section">Carte section</a></li>
+              <li><a href="#plateau">Plateau</a></li>
+              <li><a href="#Gameplay_video">Vidéo Gameplay</a></li>
+              <li><a href="#video_promo">Vidéo Promo</a></li>
+              <li><a href="#jeu_online">Tester notre jeu</a></li>
+              <li><a href="#financement">Financement</a></li>
+            </ul>
+          </nav>
+          <div class="center_footer_content">
+            <h3>Say hi!</h3>
+            <p>Une question, une idée ? Parlez-nous de The Forest Race.</p>
+            <button>Discutons!</button>
+          </div>
+          <div class="mention_legal">&copy; 2026 Mention légale</div>
+        </div>
+      </div>
+      <div class="theforestrace_title_footer">THE FOREST RACE</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
+
+    <script type="module" src="3D_Boite.js"></script>
+    <script type="module" src="3D_pion.js"></script>
+    <script src="script.js"></script>
+    <!--<script type="module" src="test.js"></script>-->
+  </body>
 </html>
